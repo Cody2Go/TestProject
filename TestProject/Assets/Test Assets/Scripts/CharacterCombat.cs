@@ -44,6 +44,9 @@ public class CharacterCombat : MonoBehaviour
     {
         yield return new WaitForSeconds(delay);
 
-        stats.TakeDamage(myStats.damage.GetValue());
+        if (stats != null)
+        {
+            stats.TakeDamage(myStats.damage.GetValue());
+        }       
     }
 }
