@@ -12,8 +12,12 @@ GameObject:
   - component: {fileID: 2819195698986509893}
   - component: {fileID: 2819195698986509894}
   - component: {fileID: 2819195698986509895}
+  - component: {fileID: 1170516860}
+  - component: {fileID: 1170516861}
+  - component: {fileID: 1170516862}
+  - component: {fileID: 1170516863}
   m_Layer: 0
-  m_Name: NPC
+  m_Name: Ally
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -87,6 +91,71 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1170516860
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2819195698986509900}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7cee107a0bf1df344b5237321c1d65fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lookRadius: 10
+  isInCombat: 0
+  playerDistance: 0
+--- !u!114 &1170516861
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2819195698986509900}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e25cb4fb43771245b961b0ffcdb485d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 100
+  damage:
+    baseValue: 5
+  armor:
+    baseValue: 0
+--- !u!114 &1170516862
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2819195698986509900}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af1e608d78aef044abbf77b2ea944829, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  radius: 5
+  dialogue:
+    name: Ally
+    sentences:
+    - Hey.
+    - Hi.
+    - Hello.
+--- !u!114 &1170516863
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2819195698986509900}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ac0dd4849d550b438b869d4333080db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackSpeed: 1
+  attackDelay: 0.6
 --- !u!1 &2819195699039288699
 GameObject:
   m_ObjectHideFlags: 0
@@ -99,7 +168,7 @@ GameObject:
   - component: {fileID: 2819195699039288696}
   - component: {fileID: 2819195699039288697}
   m_Layer: 0
-  m_Name: Enemy (Body Visual)
+  m_Name: Ally (Body Visual)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -178,7 +247,7 @@ GameObject:
   - component: {fileID: 2819195700193939789}
   - component: {fileID: 2819195700193939790}
   m_Layer: 0
-  m_Name: Enemy (Head Visual)
+  m_Name: Ally (Head Visual)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
